@@ -13,6 +13,5 @@
      <input type="submit" value="Login"/>
     </form><br/><br/>
             <a href="register">Register</a>
-            <br><br>ESL for flower shops: http://students.cs.byu.edu/~kdevenis/proj4/guild/proj4-guild/CodeIgniter_2.1.3/index.php/event
  </body>
 </html>
