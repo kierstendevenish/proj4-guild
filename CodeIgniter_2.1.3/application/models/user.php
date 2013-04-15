@@ -48,7 +48,7 @@ Class User extends CI_Model
         {
                 var_dump("INSERT INTO Users VALUES ('" . $username . "','" . $password . "','" . $usertype, "','" . $esl . "');");
                 $db = new PDO('sqlite:./application/db/guild');
-                $result = $db->query("INSERT INTO Users VALUES ('" . $username . "','" . $password . "','" . $usertype, "','" . $esl . "');");
+                $result = $db->query("INSERT INTO Users VALUES ('" . $username . "','" . $password . "','" . $usertype. "','" . $esl . "');");
         }
         
         function getALlEsls()
