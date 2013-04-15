@@ -44,10 +44,10 @@ Class User extends CI_Model
         }
      
         
-        function register($username, $password, $phone, $esl)
+        function register($username, $password, $usertype, $phone, $esl)
         {
                 $db = new PDO('sqlite:./application/db/guild');
-                $result = $db->query("INSERT INTO Users VALUES ('" . $username . "','" . $password . "','" . $esl . "');");
+                $result = $db->query("INSERT INTO Users VALUES ('" . $username . "','" . $password . "','" . $usertype, "','" . $esl . "');");
         }
         
         function getALlEsls()

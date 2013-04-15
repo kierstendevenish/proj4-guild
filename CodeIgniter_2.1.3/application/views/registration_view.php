@@ -13,6 +13,12 @@
      <label for="password">Password:</label>
      <input type="password" size="20" id="password" name="password"/>
      <br/>
+     <label for="usertype">Type of User:</label>
+     <select id="usertype" name="usertype"/>
+        <option id="driver" value="driver">Driver</option>
+        <option id="flowershop" value="flowershop">Flower Shop</option>
+     </select>
+     <br/>
      <label for="phone">Phone Number (for SMS):</label>
      <input type="text" size="11" id="phone" name="phone"/>
      <br/>
