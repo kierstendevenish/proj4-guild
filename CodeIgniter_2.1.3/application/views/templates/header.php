@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Flower Shop</title>
+	<title>Driver's Guild</title>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url()."application/css/style.css"; ?>">
         <!-- <style> @import url('<?=base_url()?>/application/css/styles.css'); </style> -->
 </head>
@@ -11,5 +11,5 @@
         </ul>
     </div>
     <div id="body">
-        <title>Flower Shop</title>
-        <br><h1>Flower Shop</h1><br>
+        <title>Driver's Guild</title>
+        <br><h1>Driver's Guild</h1><br>
