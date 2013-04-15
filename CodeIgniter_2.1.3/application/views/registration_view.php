@@ -19,12 +19,6 @@
         <option id="flowershop" value="flowershop">Flower Shop</option>
      </select>
      <br/>
-     <label for="phone">Phone Number (for SMS):</label>
-     <input type="text" size="11" id="phone" name="phone"/>
-     <br/>
-     <label for="esl">ESL (you can set this later if not known):</label>
-     <input type="text" size="200" id="esl" name="esl"/>
-     <br/>
      <input type="submit" value="Register"/>
     </form><br><br>
  </body>

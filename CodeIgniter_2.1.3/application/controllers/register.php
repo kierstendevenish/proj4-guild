@@ -21,7 +21,7 @@ class Register extends CI_Controller {
             $password = $this->input->post('password');
             $usertype = $this->input->post('usertype');
             $phone = $this->input->post('phone');
-            $esl = $this->input->post('esl');
+            $esl = "http://students.cs.byu.edu/~kdevenis/proj4/guild/proj4-guild/CodeIgniter_2.1.3/index.php/event/" . $username;
             
             $this->load->model('user');
             $this->user->register($username, $password, $usertype, $phone, $esl);
