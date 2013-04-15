@@ -20,7 +20,6 @@ class Register extends CI_Controller {
             $username = $this->input->post('username');
             $password = $this->input->post('password');
             $usertype = $this->input->post('usertype');
-            var_dump($usertype);
             $phone = $this->input->post('phone');
             $esl = $this->input->post('esl');
             
