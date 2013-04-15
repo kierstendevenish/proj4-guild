@@ -47,7 +47,7 @@ Class User extends CI_Model
         function register($username, $password, $usertype, $phone, $esl)
         {
                 $db = new PDO('sqlite:./application/db/guild');
-                $result = $db->query("INSERT INTO Users VALUES ('" . $username . "','" . $password . "','" . $usertype . "','" . $esl . "');");
+                $result = $db->query("INSERT INTO Users VALUES ('" . $username . "','" . $password . "','" . $usertype . "','" . $esl . "',0);");
         }
         
         function getALlEsls()
@@ -67,6 +67,26 @@ Class User extends CI_Model
                     return $data;
                 }
                 
+                return $result;
+        }
+
+        function getTop3Esls()
+        {
+            $db = new PDO('sqlite:./application/db/guild');
+                $result = $db->query("SELECT esl FROM Users ORDER BY rating DESC LIMIT 3;");
+
+                if(count($result) >= 1)
+                {
+                    $data = array();
+
+                    foreach ($result as $row)
+                    {
+                        array_push($data, $row['esl']);
+                    }
+
+                    return $data;
+                }
+
                 return $result;
         }
 }
