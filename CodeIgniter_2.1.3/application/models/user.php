@@ -46,7 +46,7 @@ Class User extends CI_Model
         
         function register($username, $password, $usertype, $phone, $esl)
         {
-                var_dump("INSERT INTO Users VALUES ('" . $username . "','" . $password . "','" . $usertype, "','" . $esl . "');");
+                var_dump("INSERT INTO Users VALUES ('" . $username . "','" . $password . "','" . $usertype . "','" . $esl . "');");
                 $db = new PDO('sqlite:./application/db/guild');
                 $result = $db->query("INSERT INTO Users VALUES ('" . $username . "','" . $password . "','" . $usertype . "','" . $esl . "');");
         }
