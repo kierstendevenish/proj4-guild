@@ -19,6 +19,9 @@
         <option id="flowershop" value="flowershop">Flower Shop</option>
      </select>
      <br/>
+     <label for="esl">Esl:</label>
+     <input type="text" size="100" id="esl" name="esl"/>
+     <br/>
      <input type="submit" value="Register"/>
     </form><br><br>
  </body>
