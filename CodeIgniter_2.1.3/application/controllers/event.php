@@ -44,6 +44,10 @@ class Event extends CI_Controller {
                         curl_close($ch);
                     }
                 }
+                else if ($name == 'bid_awarded')
+                {
+                    log_message("info", "bid awarded");
+                }
             }
 	}
 }
