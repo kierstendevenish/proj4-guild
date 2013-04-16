@@ -7,7 +7,11 @@ class Event extends CI_Controller {
 		parent::__construct();
  	}
 
-	function index($id = '')
+        function index()
+        {
+        }
+
+	function consume($id = '')
 	{
             $name = $this->input->post('_name');
             $domain = $this->input->post('_domain');
