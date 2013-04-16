@@ -24,7 +24,7 @@ class Register extends CI_Controller {
             //$esl = "http://students.cs.byu.edu/~kdevenis/proj4/guild/proj4-guild/CodeIgniter_2.1.3/index.php/event/" . $username;
             
             $this->load->model('user');
-            $this->user->register($username, $password, $usertype, $phone, $esl);
+            $this->user->register($username, $password, $usertype, $esl);
             
             redirect('home');
         }
