@@ -32,7 +32,7 @@ class Event extends CI_Controller {
                     $shopEsl = $this->input->post('shopEsl');
                     $shopCoords = $this->input->post('shopCoords');
 
-                    foreach ($esl as $e)
+                    foreach ($esls as $e)
                     {
                         $fields_str = '_name=delivery_ready&_domain=rfq&id='.$id.'&shopName='.$shopName.'&shopCoords='.$shopCoords.'&pickupTime='.$pickupTime.'&deliveryAddr='.$deliveryAddr.'&deliveryTime='.$deliveryTime.'&shopEsl='.$shopEsl;
                         $ch = curl_init();
