@@ -49,6 +49,7 @@ class Event extends CI_Controller {
                     $driverName = $this->input->post('driverName');
                     $deliveryId = $this->input->post('deliveryId');
 
+                    $this->load->model('user');
                     $esl = $this->user->getEsl($driverName);
 
                     $fields_str = '_name=bid_awarded&_domain=rfq&driverName='.$driverName.'&deliveryId='.$deliveryId;
