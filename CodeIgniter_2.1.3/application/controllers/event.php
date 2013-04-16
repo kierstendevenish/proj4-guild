@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Rfq extends CI_Controller {
+class Event extends CI_Controller {
 
 	function __construct()
  	{
@@ -12,7 +12,7 @@ class Rfq extends CI_Controller {
             $name = $this->input->post('_name');
             $domain = $this->input->post('_domain');
 
-            /*if ($domain == 'rfq')
+            if ($domain == 'rfq')
             {
                 if ($name == 'delivery_ready')
                 {
@@ -40,7 +40,7 @@ class Rfq extends CI_Controller {
                         curl_close($ch);
                     }
                 }
-            }*/
+            }
 	}
 }
 
