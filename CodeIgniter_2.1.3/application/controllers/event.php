@@ -47,6 +47,7 @@ class Event extends CI_Controller {
                 else if ($name == 'bid_awarded')
                 {
                     log_message("info", "bid awarded");
+                    var_dump("bid awarded");
                 }
             }
 	}
