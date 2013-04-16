@@ -16,7 +16,7 @@ class Event extends CI_Controller {
             $name = $this->input->post('_name');
             $domain = $this->input->post('_domain');
 
-            /*if ($domain == 'rfq')
+            if ($domain == 'rfq')
             {
                 if ($name == 'delivery_ready')
                 {
@@ -44,7 +44,7 @@ class Event extends CI_Controller {
                         curl_close($ch);
                     }
                 }
-            }*/
+            }
 	}
 }
 
