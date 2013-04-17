@@ -89,5 +89,13 @@ Class User extends CI_Model
 
                 return $result;
         }
+
+        function raiseRank($user = '')
+        {
+            $db = new PDO('sqlite:./application/db/guild');
+            $result = $db->query("SELECT rating FROM Users WHERE username='".$user."';");
+            $rating = $result['rating'] + 0.5;
+            $db->query("UPDATE Users SET rating='".$rating."' WHERE username='".$user."';");
+        }
 }
 ?>

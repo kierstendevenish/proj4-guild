@@ -84,5 +84,23 @@ Class Request extends CI_Model
             $db = new PDO('sqlite:./application/db/guild');
             $db->query("UPDATE Deliveries SET pickedUp=1 WHERE deliveryId='".$deliveryId."';");
         }
+
+        function getDriver($deliveryId = '')
+        {
+            $db = new PDO('sqlite:./application/db/guild');
+                $result = $db->query("SELECT driverName FROM Deliveries WHERE deliveryId='" . $deliveryId . "';");
+
+                if(count($result) == 1)
+                {
+                    foreach ($result as $row)
+                    {
+                        $esl = $row['driverName'];
+                    }
+
+                    return $esl;
+                }
+
+                return '';
+        }
 }
 ?>

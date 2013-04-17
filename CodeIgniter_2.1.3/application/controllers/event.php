@@ -77,6 +77,10 @@ class Event extends CI_Controller {
 
                     $this->load->model('request');
                     $this->request->markPickedUp($deliveryId);
+                    $user = $this->request->getDriver($deliveryId);
+
+                    $this->load->model('user');
+                    $this->user->raiseRank($user);
                 }
                 else if ($name == 'complete')
                 {
