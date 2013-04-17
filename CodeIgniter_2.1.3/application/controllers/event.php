@@ -84,7 +84,14 @@ class Event extends CI_Controller {
                 }
                 else if ($name == 'complete')
                 {
-                    //update driver ranking if on time
+                    $deliveryId = $this->input->post('deliveryId');
+
+                    $this->load->model('request');
+                    $this->request->markPickedUp($deliveryId);
+                    $user = $this->request->getDriver($deliveryId);
+
+                    $this->load->model('user');
+                    $this->user->raiseRank($user);
                 }
             }
 	}
