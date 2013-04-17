@@ -76,7 +76,7 @@ Class Request extends CI_Model
         function markUser($deliveryId = '', $user = "")
         {
             $db = new PDO('sqlite:./application/db/guild');
-            $db->query("UPDATE Deliveries SET driverName='".$user." WHERE deliveryId='".$deliveryId."';");
+            $db->query("UPDATE Deliveries SET driverName='".$user."' WHERE deliveryId='".$deliveryId."';");
         }
 }
 ?>
