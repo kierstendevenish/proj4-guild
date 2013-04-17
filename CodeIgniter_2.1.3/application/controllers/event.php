@@ -43,6 +43,10 @@ class Event extends CI_Controller {
                         curl_exec($ch);
                         curl_close($ch);
                     }
+
+                    //save the delivery
+                    $this->load->model('request');
+                    $this->request->saveDelivery($deliveryId);
                 }
                 else if ($name == 'bid_awarded')
                 {
@@ -60,8 +64,13 @@ class Event extends CI_Controller {
                     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
                     curl_exec($ch);
                     curl_close($ch);
-
-                    var_dump("$driverName");
+                }
+            }
+            else if ($domain == 'delivery')
+            {
+                if ($name == 'complete')
+                {
+                    //update driver ranking if on time
                 }
             }
 	}

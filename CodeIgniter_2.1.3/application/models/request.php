@@ -66,5 +66,11 @@ Class Request extends CI_Model
             $result = $db->query("SELECT * FROM Bids WHERE deliveryId='" . $requestId . "';");
             return $result;
         }
+
+        function saveDelivery($deliveryId = '')
+        {
+            $db = new PDO('sqlite:./application/db/guild');
+            $db->query("INSERT INTO Deliveries VALUES ('".$deliveryId."','',0,0);");
+        }
 }
 ?>
