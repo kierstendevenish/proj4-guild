@@ -53,6 +53,9 @@ class Event extends CI_Controller {
                     $driverName = $this->input->post('driverName');
                     $deliveryId = $this->input->post('deliveryId');
 
+                    $this->load->model('request');
+                    $this->request->markUser($deliveryId, $driverName);
+
                     $this->load->model('user');
                     $esl = $this->user->getEsl($driverName);
 
