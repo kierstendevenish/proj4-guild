@@ -46,7 +46,7 @@ class Event extends CI_Controller {
 
                     //save the delivery
                     $this->load->model('request');
-                    $this->request->saveDelivery($deliveryId);
+                    $this->request->saveDelivery($id);
                 }
                 else if ($name == 'bid_awarded')
                 {
