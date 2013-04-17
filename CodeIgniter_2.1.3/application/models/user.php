@@ -94,8 +94,19 @@ Class User extends CI_Model
         {
             $db = new PDO('sqlite:./application/db/guild');
             $result = $db->query("SELECT rating FROM Users WHERE username='".$user."';");
-            $rating = $result['rating'] + 0.5;
-            $db->query("UPDATE Users SET rating='".$rating."' WHERE username='".$user."';");
+
+            if(count($result) >= 1)
+                {
+                    $data = array();
+
+                    foreach ($result as $row)
+                    {
+                        $rating = $row['rating'] + 0.5;
+                        $db->query("UPDATE Users SET rating='".$rating."' WHERE username='".$user."';");
+                    }
+
+                    return $data;
+                }
         }
 }
 ?>
